@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    counter-reset: beerGomer;
+    background-image: url("../gif/небо\ и\ трава.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 bottom;
+    overflow: hidden;
+    cursor: url('../img/free-icon-hand-14000074.png'), pointer;
+}
+
+.audio{
+    position:absolute;
+    left: 0;
+    top: 5%;
+}
+
+.count{
+    position: absolute;
+    left: 80%;
+    bottom: 80%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(217, 13, 156);
+    transform: translateX(-50%);
+}
+
+.count::after{
+    content: counter(beerGomer);
+}
+
+.donat{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    left: -200px;
+}
+
+
+.dad label{
+width: 400px;
+height: 400px;
+}
+
+.dad {
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 70%;
+    left: 40%;
+    background-image: url("../gif/гомер3.gif")
+}
+
+.dad input{
+    position: absolute;
+    left: -100px;
+}
+
+.beer{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    right: -200px;
+}
+
+.beer label{
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    cursor: url('../img/free-icon-hand-14000074.png'), pointer;
+}
+
+.beer input{
+    position: absolute;
+    left: -100px;
+}
+
+.beer1{
+    overflow: hidden;
+    background-image: url("../img/free-icon-beer-2659747.png");
+    background-repeat: no-repeat;
+    animation-name: fly3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.beer2{
+    overflow: hidden;
+    background-image: url("../img/free-icon-beer-2659747.png");
+    background-repeat: no-repeat;
+    animation-name: fly3;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+
+
+input:checked{
+    counter-increment:beerGomer;
+}
+
+input:checked + label{
+    display: none;
+    
+}
+
+.donat label{
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    cursor: url('../img/free-icon-hand-14000074.png'), pointer;
+}
+
+.donat input{
+    position: absolute;
+    left: -100px;
+}
+
+.donat1{
+    background-image: url("../img/free-icon-donut-2794438.png");
+    background-repeat: no-repeat;
+    animation-name: fly1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.donat2{
+    background-image: url("../img/free-icon-donut-2821785.png");
+    background-repeat: no-repeat;
+    animation-name: fly1;
+    animation-duration: 15s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.donat3{
+    background-image: url("../img/free-icon-donut-761952.png");
+    background-repeat: no-repeat;
+    animation-name: fly1;
+    animation-duration: 12s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.donat4{
+    background-image: url("../img/free-icon-donut-8932712.png");
+    background-repeat: no-repeat;
+    animation-name: fly2;
+    animation-duration: 11s;
+    animation-delay: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes fly1{
+    0%{
+        top: 50%;
+        left: -5%;
+    }
+    25%{
+        top: 10%;
+        left: 25%;
+    }
+    70%{
+        top: 90%;
+        left: 70%; 
+    }
+    100%{
+        top: 10%;
+        left: 110%;
+    }
+}
+
+@keyframes fly2{
+    0%{
+        top: 40%;
+        left: -5%;
+    }
+    25%{
+        top: 20%;
+        left: 25%;
+    }
+    70%{
+        top: 90%;
+        left: 70%; 
+    }
+    100%{
+        top: 15%;
+        left: 110%;
+    }
+}
+
+@keyframes fly3{
+    0%{
+        top: 45%;
+        left: -5%;
+    }
+    25%{
+        top: 30%;
+        left: 25%;
+    }
+    70%{
+        top: 90%;
+        left: 70%; 
+    }
+    100%{
+        top: 18%;
+        left: 110%;
+    }
+}
